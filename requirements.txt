@@ -9,7 +9,6 @@ colorama==0.4.6
 contourpy==1.1.0
 cycler==0.11.0
 dill==0.3.7
-dlib==19.24.2
 face_recognition @ git+https://github.com/thetoby9944/face_recognition
 filelock==3.12.3
 fonttools==4.42.1
