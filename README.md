@@ -13,7 +13,7 @@ This repository contains a Streamlit web application that uses face recognition 
 ## Usage:
 - Clone the repository.
 - Install the required libraries using pip install -r requirements.txt.
-- Run the Streamlit application using streamlit run main.py.
+- Run the Streamlit application using streamlit run streamlit_app.py.
 - Upload a frontal face image to find your celebrity look-alike.
 
 ## Note:
@@ -28,16 +28,18 @@ Celebrity images should be placed in the "Images" directory for the recognition 
 - Pillow (PIL)
 - face_recognition
 - Streamlit
-  
-## Live Demo
-
-You can try out the application by accessing the live demo hosted on Streamlit:
-
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://assefadsci-human-emotion-detection-app-9guxuh.streamlit.app/)
+- os
 
 ## Credits:
 
 The face recognition module is based on the face_recognition library.
 The image preprocessing module uses Haar Cascade face detection.
+
+## Live Demo
+
+You can try out the application by accessing the live demo hosted on Streamlit:
+
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://celebritylookalike-6k5jw9jhgfhyupmcyshrfe.streamlit.app/)
 
 
