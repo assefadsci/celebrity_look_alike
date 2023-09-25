@@ -24,11 +24,9 @@ Celebrity images should be placed in the "Images" directory for the recognition 
 
 - Python 3.7 or higher
 - OpenCV
-- NumPy
 - Pillow (PIL)
 - face_recognition
 - Streamlit
-- os
 
 ## Credits:
 
