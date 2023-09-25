@@ -2,20 +2,18 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-import face_recognition
 from FaceRecognitionModule import FaceRecognitionModule
 from ImagePreprocessor import ImagePreprocessor
-import cv2
 
 # Set up the Streamlit application
 st.set_page_config(
-    page_title='Who is Your Celebrity Look-Alike?',
-    page_icon=':sunglasses:',
+    page_title='Who is Your Celebrity Look-Alike? ',
+    page_icon='✨',
     layout='centered'
 )
 
-st.title('Who is Your Celebrity Look Alike?')
-st.text('INSTRUCTION: Upload a frontal face for better results.')
+st.title('✨:rainbow[Who is Your Celebrity Look Alike?]')
+st.divider()
 st.write("")
 
 
@@ -29,9 +27,15 @@ def load_and_encode_images():
 recognizer = load_and_encode_images()
 preprocessor= ImagePreprocessor()
 
-uploaded_file = st.sidebar.file_uploader("Upload an Image: ", type=["jpg", "png", "jpeg"])
+with st.sidebar:
+    st.info("""
+    :blue[Hey there! 👋 Upload a frontal face for better results, then click "Find My Lookalike"
+            'to discover your celebrity doppelganger!] 📸🚀'
+    """)
+    uploaded_file = st.sidebar.file_uploader("🖼️ :green[**Upload an Image**:] ", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
+
     try:
         input_image = Image.open(uploaded_file)
 
@@ -43,7 +47,8 @@ if uploaded_file is not None:
         with col1:
             st.image(face_resized, caption="Uploaded Image", use_column_width=True)
 
-        run_recognition = st.sidebar.button('Find Celebrity Look Alike')
+        run_recognition = st.sidebar.button('Find My Lookalike', type= 'primary', use_container_width=True)
+
         if run_recognition:
             recognized_image= recognizer.run_face_recognition(face_resized)
             
